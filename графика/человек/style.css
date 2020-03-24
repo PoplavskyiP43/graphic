@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: 1000px;
+    height: 850px;
+    background: url('img/peizazh.jpg') 100% 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.anim{
+    background: url(img/men.png) 37% 66% no-repeat;
+    height: 161px;
+    width: 99px;
+    animation: men 1s steps(11) infinite;
+    transform: matrix(1,0,0,1,-92,420);
+}
+.block{
+    animation: walk 30s infinite linear;
+}
+.comet{
+    background: url(img/comet.png);
+    width: 300px;
+    height: 250px;
+    transform: matrix(1, 0, 0, 1, -300, -136);
+    animation: comet 5s 2s infinite;
+}
+.lightstrike{
+    background: url(img/lightning.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    transform: matrix(1, 0, 0, 1, 595, -480);
+    animation: lighting 1s 1s infinite;
+    opacity: 0;
+}
+
+
+
+
+/* transform: matrix(1, 0, 0, 1, -300, -136); */
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes lighting{
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes comet{
+    from{
+        transform: matrix(1, 0, 0, 1, -300, -136);
+    }
+    to{
+        transform: matrix(1, 0, 0, 1, 1000, 300);
+    }
+}
+@keyframes men{
+    from{
+        background-position: 0 66%;
+    }
+    to{
+        background-position: 100% 66%;
+    }
+}
+@keyframes walk{
+    0%{
+        transform: matrix(1,0,0,1,-50,0);
+    }
+    49%{
+        transform: matrix(1,0,0,1,1100,0);
+    }
+    50%{
+        transform: matrix(-1,0,0,1,1200,0);
+    }
+    99%{
+        transform: matrix(-1,0,0,1,-1000,0);
+    }
+    100%{
+        transform: matrix(-1,0,0,1,-1050,0);
+    }
+}

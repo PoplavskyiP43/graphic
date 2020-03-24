@@ -1,0 +1,49 @@
+.cat {
+    background: url(cat.png) 50% 50% no-repeat; 
+    height: 200px;
+    width: 400px;
+    margin: 100px auto 0;
+    animation: walk steps(12) infinite 1s;
+  }
+.bird{
+    background: url(bird.png) 0 0 no-repeat;
+    height: 210px;
+    width: 400px;
+    margin: 100px auto 0;
+    animation: fly steps(4) infinite .3s;
+}
+.twitter-bird{
+    background: url(twitter-bird-sprite.png) 0 0 no-repeat;
+    height: 210px;
+    width: 150px;
+    margin: 100px auto 0;
+    animation: twitter steps(3) infinite .5s;
+}
+
+
+  
+  @keyframes walk {
+    0% {
+      background-position: 100% 0;
+    } 
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @keyframes fly{
+    0% {
+        background-position: 0 0;
+    } 
+    100% {
+        background-position: 0 100%;
+    }
+  }
+  @keyframes twitter{
+    0% {
+        background-position: 0 0;
+    } 
+    100% {
+        background-position: 100% 0;
+    }
+  }

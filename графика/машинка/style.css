@@ -1,0 +1,66 @@
+.city{
+    width: 1024px;
+    height: 345px;
+}
+.citywrapper{
+    position: absolute;
+}
+.carimage{
+    height: 70px;
+    width: 250px;
+    position: relative;
+}
+.wheel{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    animation: rotatewheel .4s infinite;
+}
+.first{
+    left: -220px;
+    top: 10px;
+}
+.second{
+    left: -105px;
+    top: 7px;
+}
+.car{
+    margin-left: 40%;
+    padding-top: 13%;
+    animation: driving 3s .5s infinite linear;
+}
+
+
+
+
+@keyframes rotatewheel{
+    from{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes driving{
+    from{
+        transform: translateX(0px) translateY(0);
+        transition: .5;
+    }
+    25%{
+        transform: translateX(-240px) translateY(30px);
+        transition: .5;
+    }
+    50%{
+        transform: translateX(-500px) translateY(0);
+        transition: .5;
+    }
+    to{
+        transform: translateX(-100%) translateY(30px);
+        transition: .5;
+    }
+}
